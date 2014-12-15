@@ -20,6 +20,12 @@
 				<label for="s_password">Password:</label>
 				<br/>
 				<input type="text" name="s_password" id="s_password"/>
+				<script type="text/javascript">
+					Spring.addDecoration(new Spring.ElementDecoration({
+						elementId : "s_password",
+						widgetType : "dijit.form.ValidationTextBox",
+						widgetAttrs : { promptMessage : "Your password", required : true}}));
+				</script>
 				<br/>
 				<button id="submit" type="submit">Sign In</button>
 				<script type="text/javascript">

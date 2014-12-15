@@ -33,7 +33,7 @@
 					Spring.addDecoration(new Spring.ElementDecoration({
 						elementId : "j_username",
 						widgetType : "dijit.form.ValidationTextBox",
-						widgetAttrs : { promptMessage : "Your username", required : true }}));
+						widgetAttrs : { promptMessage : "Your username", required : true, invalidMessage : "The username should be more than 2-characters long.", regExp : "[a-zA-Z0-9][a-zA-Z0-9]+" }}));
 				</script>
 			</p>
 			<p>

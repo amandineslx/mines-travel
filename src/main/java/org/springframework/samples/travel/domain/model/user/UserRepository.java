@@ -14,4 +14,6 @@ public interface UserRepository {
      *         otherwise.
      */
     User findByUsername(String username);
+    
+    User saveUser(User user);
 }

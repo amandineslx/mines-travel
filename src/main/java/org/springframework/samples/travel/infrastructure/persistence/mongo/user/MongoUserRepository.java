@@ -27,4 +27,9 @@ public class MongoUserRepository extends AbstractMongoRepository<User> implement
         return findOneByQuery(query(where("username").is(username)));
     }
 
+	@Override
+	public User saveUser(User user) {
+		return save(user);
+	}
+
 }

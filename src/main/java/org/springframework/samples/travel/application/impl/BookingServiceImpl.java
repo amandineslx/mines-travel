@@ -29,6 +29,8 @@ public class BookingServiceImpl implements BookingService {
         this.userRepository = userRepository;
         this.hotelRepository = hotelRepository;
         this.bookingRepository = bookingRepository;
+        User u = new User("test", "aaa", "Test");
+        userRepository.saveUser(u);
     }
 
     @Override

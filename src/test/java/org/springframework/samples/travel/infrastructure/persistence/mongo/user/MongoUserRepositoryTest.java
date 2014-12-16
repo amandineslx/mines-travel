@@ -55,11 +55,7 @@ public class MongoUserRepositoryTest {
     }
 
     
-    @Test
-    public void shouldDeleteUser() {
-    	
-    }
-
+  
     
 
 }

@@ -44,8 +44,19 @@
 		</tbody>
 	</table>
 	<div class="buttonGroup">
-		<div class="span-3">
+		<div class="span-3 append-12 last">
 			<!-- Previous link to implement -->
+			<c:if test="${not empty hotelList && searchCriteria.page > 0}">
+				<a id="previousResultsLink" href="hotels?searchString=${searchCriteria.searchString}&pageSize=${searchCriteria.pageSize}&page=${searchCriteria.page - 1}">Previous Results</a>
+				<script type="text/javascript">
+					Spring.addDecoration(new Spring.AjaxEventDecoration({
+						elementId: "previousResultsLink",
+						event: "onclick",
+						params: {fragments: "body"}		
+					}));
+				</script>
+			</c:if>		
+		</div>
 		</div>
 		<div class="span-3 append-12 last">
 			<c:if test="${not empty hotelList && fn:length(hotelList) == searchCriteria.pageSize}">

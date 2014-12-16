@@ -23,6 +23,7 @@
 				<th>Check in Date</th>
 				<th>Check out Date</th>
 				<th>Confirmation Number</th>
+				<th>Amenities</th>
 				<th>Action</th>
 			</tr>
 		</thead>
@@ -35,6 +36,7 @@
 				<td>${booking.checkinDate}</td>
 				<td>${booking.checkoutDate}</td>
 				<td>${booking.id}</td>
+				<td>${booking.formattedAmenities}</td>
 				<td>
 					<spring:url var="bookingUrl" value="/bookings/{id}">
 						<spring:param name="id" value="${booking.id}"/>

@@ -14,6 +14,7 @@
 	<!-- Maps '/users/login' requests to the 'users/login' view -->
 	<mvc:view-controller path="/users/login" />
 	<mvc:view-controller path="/users/logout" />
+	<mvc:view-controller path="/users/myProfile" />
 	<mvc:view-controller path="/users/logoutSuccess" />
 
 	<!-- Handler for executions of the 'hotels/booking' flow -->

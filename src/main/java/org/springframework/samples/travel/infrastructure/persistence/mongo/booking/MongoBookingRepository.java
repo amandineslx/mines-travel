@@ -9,6 +9,7 @@ import javax.inject.Inject;
 import org.springframework.data.mongodb.core.MongoTemplate;
 import org.springframework.samples.travel.domain.model.booking.Booking;
 import org.springframework.samples.travel.domain.model.booking.BookingRepository;
+import org.springframework.samples.travel.domain.model.booking.Hotel.Amenity;
 import org.springframework.samples.travel.domain.model.user.User;
 import org.springframework.samples.travel.infrastructure.persistence.mongo.shared.AbstractMongoRepository;
 import org.springframework.stereotype.Repository;
@@ -27,6 +28,6 @@ public class MongoBookingRepository extends AbstractMongoRepository<Booking> imp
     @Override
     public List<Booking> findUserBookings(User user) {
         return findByQuery(newSearchBookingCriteria(user).toMongoQuery());
-    }
-
+    }    
+    
 }

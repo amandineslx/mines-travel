@@ -13,9 +13,6 @@ import java.math.BigDecimal;
 @Document(collection = "hotels")
 public class Hotel implements Serializable {
 
-    /**
-     * 
-     */
     private static final long serialVersionUID = 6688678236160248906L;
 
     public enum Amenity {

@@ -62,4 +62,6 @@ public interface BookingService {
      *            the booking id
      */
     void cancelBooking(String id);
+    
+    
 }

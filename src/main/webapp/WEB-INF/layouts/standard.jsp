@@ -27,8 +27,10 @@
 						Welcome, ${pageContext.request.userPrincipal.name} |
 					</c:if>
 					<a href="<c:url value="/users/myProfile" />">My profile</a>
+					<span> | </span>
 					<a href="<c:url value="/users/logout" />">Logout</a>
-					<a href="<c:url value="/hotels/search" />">My Bookings</a><span> | </span><a href="<c:url value="/users/logout" />">Logout</a>
+					<span> | </span>
+					<a href="<c:url value="/hotels/search" />">My Bookings</a>
 				</security:authorize>
 				<security:authorize ifAllGranted="ROLE_ANONYMOUS">
 					<a href="<c:url value="/users/login" />">Login</a>

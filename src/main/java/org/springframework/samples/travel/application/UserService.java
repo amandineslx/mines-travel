@@ -15,6 +15,8 @@ public interface UserService {
      * @param name
      * the name of the user
      */
-	User createUser(String username, String password, String name);
+	User createUser(User user);
+	
+	User initUser();
 
 }

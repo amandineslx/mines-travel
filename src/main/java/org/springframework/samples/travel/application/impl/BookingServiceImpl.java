@@ -1,5 +1,6 @@
 package org.springframework.samples.travel.application.impl;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import javax.inject.Inject;
@@ -13,6 +14,8 @@ import org.springframework.samples.travel.domain.model.user.User;
 import org.springframework.samples.travel.domain.model.user.UserRepository;
 import org.springframework.samples.travel.domain.shared.SearchCriteria;
 import org.springframework.samples.travel.infrastructure.persistence.mongo.user.MongoUserRepository;
+import org.springframework.security.core.GrantedAuthority;
+import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.stereotype.Service;
 
 @Service("bookingService")
@@ -22,6 +25,7 @@ public class BookingServiceImpl implements BookingService {
     private final HotelRepository hotelRepository;
     private final BookingRepository bookingRepository;
 
+    
     @Inject
     public BookingServiceImpl(UserRepository userRepository, HotelRepository hotelRepository,
             BookingRepository bookingRepository) {
@@ -29,11 +33,8 @@ public class BookingServiceImpl implements BookingService {
         this.userRepository = userRepository;
         this.hotelRepository = hotelRepository;
         this.bookingRepository = bookingRepository;
-        User u1 = userRepository.findByUsername("test3");
-        if(u1 == null){
-        	u1 = new User("test3", "8ad8757baa8564dc136c1e07507f4a98", "Test");
-        	userRepository.saveUser(u1);
-        }
+        
+        
     }
 
     @Override

@@ -8,10 +8,10 @@
 <div class="span-5">
 	<p>Valid username/passwords are:</p>
 	<ul>
-		<li>keith/melbourne</li>
-		<li>erwin/leuven</li>
-		<li>jeremy/atlanta</li>
-		<li>scott/rochester</li>
+		<li>user/user</li>
+		<li>admin/admin</li>
+		<li>test3/test3</li>
+		
 	</ul>
 </div>
 
@@ -61,6 +61,7 @@
 				<script type="text/javascript">
 					Spring.addDecoration(new Spring.ValidateAllDecoration({event : 'onclick', elementId : 'submit'}));
 				</script>
+				<a href="<c:url value="/users/signin"/>">Sign in</a>
 			</p>
 		</fieldset>
 	</form>

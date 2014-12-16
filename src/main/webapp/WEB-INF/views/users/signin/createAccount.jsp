@@ -3,13 +3,13 @@
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 
 <div>
-	<form action="subscribe">
+	<form:form modelAttribute="user">
 		<fieldset>
 			<legend>Subscription</legend>
 			<p>
 				<label for="s_username">Username:</label>
 				<br/>
-				<input type="text" name="s_username" id="s_username"/>
+				<form:input type="text" name="s_username" id="s_username" path="username"/>
 				<script type="text/javascript">
 					Spring.addDecoration(new Spring.ElementDecoration({
 						elementId : "s_username",
@@ -19,7 +19,7 @@
 				<br/>
 				<label for="s_password">Password:</label>
 				<br/>
-				<input type="text" name="s_password" id="s_password"/>
+				<form:input type="password" name="s_password" id="s_password" path="password"/>
 				<script type="text/javascript">
 					Spring.addDecoration(new Spring.ElementDecoration({
 						elementId : "s_password",
@@ -27,12 +27,13 @@
 						widgetAttrs : { promptMessage : "Your password", required : true}}));
 				</script>
 				<br/>
-				<button id="submit" type="submit">Sign In</button>
+				<button id="proceed" name="_eventId_proceed" type="submit">Sign In</button>
 				<script type="text/javascript">
-					Spring.addDecoration(new Spring.ValidateAllDecoration({event : 'onclick', elementId : 'submit'}));
+					Spring.addDecoration(new Spring.ValidateAllDecoration({event : 'onclick', elementId : 'proceed'}));
+					Spring.addDecoration(new Spring.AjaxEventDecoration({elementId:'proceed',event:'onclick',formId:'user',params:{fragments:'body'}}));
 				</script>
 				<br/>
 			</p>
 		</fieldset>
-	</form>
+	</form:form>
 </div>

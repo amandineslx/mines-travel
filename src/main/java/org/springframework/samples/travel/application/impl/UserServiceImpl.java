@@ -1,5 +1,8 @@
 package org.springframework.samples.travel.application.impl;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import javax.inject.Inject;
 
 import org.springframework.samples.travel.application.UserService;
@@ -23,7 +26,14 @@ public class UserServiceImpl implements UserService {
 	@Override
 	public User createUser(User user) {
 		
-//		Md5PasswordEncoder encoder = new Md5PasswordEncoder();
+		//encode password
+		Md5PasswordEncoder encoder = new Md5PasswordEncoder();
+		user.setPassword(encoder.encodePassword(user.getPassword(), null));
+		
+		//set user role
+		List<String> roles = new ArrayList<String>();
+		roles.add("ROLE_USER");
+		user.setRoles(roles);
 		
 		return userRepository.saveUser(user);
 	}

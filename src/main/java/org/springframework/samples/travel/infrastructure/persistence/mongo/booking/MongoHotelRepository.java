@@ -26,7 +26,7 @@ public class MongoHotelRepository extends AbstractMongoRepository<Hotel> impleme
 
     @Override
     public List<Hotel> findHotelsByCriteria(SearchCriteria searchCriteria) {
-        return findByQuery(newSearchHotelCriteria(searchCriteria).toMongoQuery());
+        return findByQuery(newSearchHotelCriteria(searchCriteria).toMongoQuery().skip(searchCriteria.getPage()*searchCriteria.getPageSize()).limit(searchCriteria.getPageSize()));
     }
 
     @Override

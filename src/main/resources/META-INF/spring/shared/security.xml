@@ -16,11 +16,12 @@
    <!-- Define local authentication provider, a real app would use an external provider (JDBC, LDAP, CAS, etc) usernames/passwords are: keith/melbourne 
       erwin/leuven jeremy/atlanta scott/rochester -->
    <authentication-manager>
-      <authentication-provider user-service-ref="inMemoryUserDetailsService" >
+      <authentication-provider user-service-ref="inDatabaseUserDetailsService" >
          <password-encoder hash="md5" />
       </authentication-provider>
    </authentication-manager>
    
    <beans:bean id="inMemoryUserDetailsService" class="org.springframework.samples.travel.infrastructure.security.InMemoryUserDetailsService" />
+   <beans:bean id="inDatabaseUserDetailsService" class="org.springframework.samples.travel.infrastructure.security.InDatabaseUserDetailsService" />
 
 </beans:beans>

@@ -29,6 +29,11 @@ public class BookingServiceImpl implements BookingService {
         this.userRepository = userRepository;
         this.hotelRepository = hotelRepository;
         this.bookingRepository = bookingRepository;
+        User u1 = userRepository.findByUsername("test3");
+        if(u1 == null){
+        	u1 = new User("test3", "8ad8757baa8564dc136c1e07507f4a98", "Test");
+        	userRepository.saveUser(u1);
+        }
     }
 
     @Override

@@ -16,7 +16,7 @@ public class LoginSuccessHandler implements AuthenticationSuccessHandler{
 	public void onAuthenticationSuccess(HttpServletRequest arg0,
 			HttpServletResponse arg1, Authentication arg2) throws IOException,
 			ServletException {
-		arg0.getSession().setAttribute("loginSuccess", loginSuccess + 1);
+		loginSuccess++;
 		arg1.sendRedirect("../../hotels/search/");
 	}
 	

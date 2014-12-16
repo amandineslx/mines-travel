@@ -8,6 +8,8 @@
 <div class="span-5">
 	<p>Valid username/passwords are:</p>
 	<ul>
+		<li>user/user</li>
+		<li>admin/admin</li>
 		<li>test3/test3</li>
 		
 	</ul>

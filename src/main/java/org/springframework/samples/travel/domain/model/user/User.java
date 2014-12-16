@@ -30,6 +30,8 @@ public class User implements Serializable {
 	private String name;
 
 	private List<String> roles;
+	
+	private String formattedProfil;
 
 	public User() {
 	}
@@ -39,6 +41,7 @@ public class User implements Serializable {
 		this.username = username;
 		this.password = password;
 		this.name = name;
+		this.formattedProfil = this.getFormattedProfil();
 	}
 
 	public String getId() {

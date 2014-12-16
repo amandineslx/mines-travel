@@ -2,13 +2,10 @@ package org.springframework.samples.travel.infrastructure.security;
 
 import static com.google.common.collect.Sets.newHashSet;
 
-import java.util.Collection;
-
 import javax.inject.Inject;
 
 import org.springframework.samples.travel.domain.model.user.User;
 import org.springframework.samples.travel.domain.model.user.UserRepository;
-import org.springframework.security.config.annotation.authentication.configurers.provisioning.UserDetailsManagerConfigurer.UserDetailsBuilder;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;

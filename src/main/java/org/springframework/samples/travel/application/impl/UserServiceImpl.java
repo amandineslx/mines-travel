@@ -21,12 +21,15 @@ public class UserServiceImpl implements UserService {
 
 
 	@Override
-	public User createUser(String username, String password,String name) {
+	public User createUser(User user) {
 		
 //		Md5PasswordEncoder encoder = new Md5PasswordEncoder();
-		User user = new User(username, password, name);
 		
 		return userRepository.saveUser(user);
+	}
+	
+	public User initUser() {
+		return new User();
 	}
 
 }

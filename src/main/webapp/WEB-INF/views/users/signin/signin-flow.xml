@@ -10,10 +10,10 @@
 	</on-start>
 	
 	<view-state id="createAccount" model="user">
-<!-- 		<binder> -->
-<!-- 			<binding property="username" required="true" /> -->
-<!-- 			<binding property="password" required="true" /> -->
-<!-- 		</binder> -->
+		<binder>
+			<binding property="username" required="true" />
+			<binding property="password" required="true" />
+		</binder>
 		<transition on="proceed" to="userCreated" />
 	</view-state>
 	

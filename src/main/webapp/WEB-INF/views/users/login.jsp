@@ -61,6 +61,7 @@
 				<script type="text/javascript">
 					Spring.addDecoration(new Spring.ValidateAllDecoration({event : 'onclick', elementId : 'submit'}));
 				</script>
+				<a href="<c:url value="/users/signin"/>">Sign in</a>
 			</p>
 		</fieldset>
 	</form>

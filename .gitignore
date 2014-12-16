@@ -14,4 +14,14 @@ hs_err_pid*
 .idea
 
 *.iml
+<<<<<<< HEAD
 /target
+=======
+/target/
+
+
+#personnal workspace
+.classpath
+.project
+.settings
+>>>>>>> master

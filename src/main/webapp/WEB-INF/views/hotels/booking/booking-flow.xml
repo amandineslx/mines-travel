@@ -41,7 +41,11 @@
       </on-entry>
     </end-state>
 
-	<end-state id="cancel" />
+	<end-state id="cancel" >
+	 <on-entry>
+          <evaluate expression="bookingService.cancelBooking(flowScope.booking.id)" result="flowScope.booking" />
+      </on-entry>
+	</end-state>
    
    <on-end>
        <evaluate expression="bookingService.findBookings(currentUser.name)" result="flowScope.bookingList" />
